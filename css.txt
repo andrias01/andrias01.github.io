@@ -1,0 +1,146 @@
+1. ¿Qué es CSS?
+CSS (Cascading Style Sheets) es un lenguaje que se usa para diseñar páginas web. Permite cambiar colores, tamaños, posiciones, fuentes, y más.
+
+2. Sintaxis básica
+Un archivo CSS está compuesto por selectores y declaraciones:
+
+css
+Copiar
+Editar
+selector {
+  propiedad: valor;
+}
+Ejemplo:
+
+css
+Copiar
+Editar
+p {
+  color: blue;
+  font-size: 18px;
+}
+Esto hará que todos los <p> sean azules y tengan un tamaño de 18px.
+
+3. Cómo aplicar CSS
+Tienes tres formas de aplicar CSS:
+
+CSS en línea (dentro del HTML)
+
+html
+Copiar
+Editar
+<p style="color: red;">Texto en rojo</p>
+CSS interno (dentro del <style> en el HTML)
+
+html
+Copiar
+Editar
+<style>
+  p {
+    color: red;
+  }
+</style>
+CSS externo (en un archivo .css, recomendado)
+
+css
+Copiar
+Editar
+/* styles.css */
+p {
+  color: red;
+}
+Y lo enlazas en el HTML:
+
+html
+Copiar
+Editar
+<link rel="stylesheet" href="styles.css">
+4. Selectores básicos
+p → Selecciona todos los párrafos <p>.
+.clase → Selecciona elementos con una clase específica.
+#id → Selecciona un elemento con un ID específico.
+Ejemplo:
+
+css
+Copiar
+Editar
+h1 {
+  color: green;
+}
+
+.mi-clase {
+  font-weight: bold;
+}
+
+#mi-id {
+  text-align: center;
+}
+Y en HTML:
+
+html
+Copiar
+Editar
+<h1>Hola Mundo</h1>
+<p class="mi-clase">Texto en negrita</p>
+<p id="mi-id">Texto centrado</p>
+5. Propiedades esenciales
+Propiedad	Descripción
+color	Color del texto
+background-color	Color de fondo
+font-size	Tamaño del texto
+font-family	Fuente del texto
+margin	Margen externo del elemento
+padding	Espaciado interno del elemento
+border	Borde alrededor del elemento
+width / height	Ancho y alto
+Ejemplo:
+
+css
+Copiar
+Editar
+div {
+  background-color: lightgray;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid black;
+}
+6. Posicionamiento
+position: static; (por defecto)
+position: relative; (se mueve respecto a su posición original)
+position: absolute; (se posiciona respecto al primer padre con position: relative)
+position: fixed; (permanece fijo en la pantalla)
+Ejemplo:
+
+css
+Copiar
+Editar
+.box {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+7. Flexbox (Para centrar y distribuir elementos fácilmente)
+Flexbox es útil para alinear elementos dentro de un contenedor.
+
+css
+Copiar
+Editar
+.container {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;  /* Centra verticalmente */
+  height: 100vh;
+}
+8. Grid (Para crear diseños en cuadrícula)
+Grid permite dividir la pantalla en columnas y filas fácilmente.
+
+css
+Copiar
+Editar
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  gap: 10px;
+}
